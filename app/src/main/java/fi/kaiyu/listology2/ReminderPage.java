@@ -37,7 +37,7 @@ public class ReminderPage extends AppCompatActivity {
         ArrayList<String> theList = new ArrayList<>();
         Cursor data = objMyDB.getListContents();
         if (data.getCount() == 0) {
-            Toast.makeText(ReminderPage.this, "The Database was empty", Toast.LENGTH_SHORT).show();
+            Log.d("Database: ", "The database was empty");
         } else {
             while (data.moveToNext()) {
                 Log.d("ReadDatabase", data.getString(1));

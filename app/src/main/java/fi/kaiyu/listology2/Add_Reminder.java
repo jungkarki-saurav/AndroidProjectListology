@@ -1,7 +1,5 @@
 package fi.kaiyu.listology2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.ContentValues;
@@ -14,10 +12,9 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
-
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Calendar;
 
@@ -26,12 +23,10 @@ import java.util.Calendar;
  */
 public class Add_Reminder extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
-    private Button saveButton;
     private EditText eventText;
     private TextView dateText;
     private TextView timeText;
-    private Button timePicker;
-    private Context time = this;
+    private final Context time = this;
     DatabaseHelper objMyDB;
 
 
@@ -39,33 +34,23 @@ public class Add_Reminder extends AppCompatActivity implements DatePickerDialog.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add__reminder);
-        Intent intent = getIntent();
+
+
         objMyDB = new DatabaseHelper(this);
-        eventText = (EditText) findViewById(R.id.eventName);
-        saveButton = (Button) findViewById(R.id.saveButton);
+        eventText = findViewById(R.id.eventName);
+
         dateText = findViewById(R.id.showDate);
-        timeText = (TextView) findViewById(R.id.showTime);
-        timePicker = (Button) findViewById(R.id.pickTime);
+        timeText =  findViewById(R.id.showTime);
+        Button timePicker = findViewById(R.id.pickTime);
+
         Calendar calendar = Calendar.getInstance();
         final int hour = calendar.get(Calendar.HOUR_OF_DAY);
         final int minute = calendar.get(Calendar.MINUTE);
-        findViewById(R.id.pickDate).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDatePickerDialog();
-            }
-        });
-        timePicker.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TimePickerDialog timePickerDialog = new TimePickerDialog(time, new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        timeText.setText(hourOfDay + ":" + minute);
-                    }
-                }, hour, minute, android.text.format.DateFormat.is24HourFormat(time));
-                timePickerDialog.show();
-            }
+
+        findViewById(R.id.pickDate).setOnClickListener(view -> showDatePickerDialog());
+        timePicker.setOnClickListener(v -> {
+            TimePickerDialog timePickerDialog = new TimePickerDialog(time, (view, hourOfDay, minute1) -> timeText.setText(hourOfDay + ":" + minute1), hour, minute, android.text.format.DateFormat.is24HourFormat(time));
+            timePickerDialog.show();
         });
 
     }
@@ -104,7 +89,7 @@ public class Add_Reminder extends AppCompatActivity implements DatePickerDialog.
         try {
             objMyDB.getReadableDatabase();
         } catch (Exception e) {
-            Toast.makeText(this, "exception while creating database" + e.getMessage(), Toast.LENGTH_SHORT);
+            Toast.makeText(this, "exception while creating database" + e.getMessage(), Toast.LENGTH_SHORT).show();
 
         }
 
