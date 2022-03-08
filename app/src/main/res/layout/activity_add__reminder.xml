@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191D1A"
+    tools:context=".Add_Reminder">
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginRight="62dp"
+        android:layout_marginBottom="74dp"
+        android:background="@drawable/btn_rounded"
+        android:onClick="insertIntoDatabase"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pickTime"
+        app:layout_constraintStart_toStartOf="@+id/showTime"
+        app:layout_constraintTop_toBottomOf="@+id/pickTime" />
+
+    <Button
+        android:id="@+id/pickDate"
+        android:layout_width="229dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="43dp"
+        android:background="@drawable/btn_rounded"
+        android:text="@string/pick_date"
+        app:layout_constraintBottom_toTopOf="@+id/showTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showDate" />
+
+    <Button
+        android:id="@+id/pickTime"
+        android:layout_width="229dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="170dp"
+        android:background="@drawable/btn_rounded"
+        android:text="@string/pick_time"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showTime" />
+
+    <EditText
+        android:id="@+id/eventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:hint="@string/event_name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/myLightGreen"
+        android:textColor="@color/myLightGreen"
+        app:layout_constraintBottom_toTopOf="@+id/showDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/showDate"
+        android:layout_width="204dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:hint="@string/date"
+        android:textColor="@color/myLightGreen"
+        android:textColorHint="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/pickDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventName" />
+
+    <TextView
+        android:id="@+id/showTime"
+        android:layout_width="204dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="27dp"
+        android:hint="@string/time"
+        android:textColor="@color/myLightGreen"
+        android:textColorHint="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/pickTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickDate" />
+</androidx.constraintlayout.widget.ConstraintLayout>
