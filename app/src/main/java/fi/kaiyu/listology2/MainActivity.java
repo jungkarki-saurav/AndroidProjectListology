@@ -10,7 +10,6 @@ import android.view.View;
 
 /**
  * This is the main screen of the app which allows the user to navigate to the tasks page
- *
  */
 public class MainActivity extends AppCompatActivity {
     /**
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Shows the Tasks page
-     * @param view -the button which will take us to the Add Tasks page
+     * @param view -the button which will take us to the Tasks page
      */
     public void onClickReminder(View view) {
         Intent intent = new Intent(this, ReminderPage.class);
