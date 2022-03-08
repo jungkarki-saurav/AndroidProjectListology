@@ -1,4 +1,4 @@
-package com.example.fixme;
+package fi.kaiyu.listology2;
 
 import android.content.Context;
 import android.database.Cursor;

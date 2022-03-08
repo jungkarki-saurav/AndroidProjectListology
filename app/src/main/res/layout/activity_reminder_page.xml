@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#191D1A"
-    tools:context=".ReminderPage">
+    tools:context="fi.kaiyu.listology2.ReminderPage">
 
         <Button
             android:id="@+id/button"

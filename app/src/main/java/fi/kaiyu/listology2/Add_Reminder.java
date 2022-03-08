@@ -1,4 +1,4 @@
-package com.example.fixme;
+package fi.kaiyu.listology2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +16,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+
 
 import java.util.Calendar;
 

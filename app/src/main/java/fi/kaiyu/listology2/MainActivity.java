@@ -1,10 +1,12 @@
-package com.example.fixme;
+package fi.kaiyu.listology2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+
 
 /**
  * combines the reminder page and calendar page

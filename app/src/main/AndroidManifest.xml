@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fixme">
+    package="fi.kaiyu.listology2">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
@@ -11,11 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Add_Reminder" />
-        <activity android:name=".ReminderPage" />
-        <activity android:name=".CalendarPage" />
+        <activity android:name="fi.kaiyu.listology2.Add_Reminder" />
+        <activity android:name="fi.kaiyu.listology2.ReminderPage" />
+        <activity android:name="fi.kaiyu.listology2.CalendarPage" />
         <activity
-            android:name=".SplashActivity"
+            android:name="fi.kaiyu.listology2.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="fi.kaiyu.listology2.MainActivity">
         </activity>
     </application>
 

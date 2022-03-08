@@ -1,4 +1,4 @@
-package com.example.fixme;
+package fi.kaiyu.listology2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+
 
 import java.util.ArrayList;
 

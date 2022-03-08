@@ -1,8 +1,10 @@
-package com.example.fixme;
+package fi.kaiyu.listology2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+
 
 /**
  * Calendar pagse
