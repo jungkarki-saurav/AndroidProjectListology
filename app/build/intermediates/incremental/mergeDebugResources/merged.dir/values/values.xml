@@ -378,7 +378,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with <ns1:g example="Mail" id="application_name">%s</ns1:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="addItem">+</string>
-    <string name="app_name">Fix Me</string>
+    <string name="app_name">Listology</string>
     <string name="calendar">CALENDAR</string>
     <string name="date">Date</string>
     <string name="event_name">Event Name</string>

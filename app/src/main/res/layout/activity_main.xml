@@ -39,7 +39,7 @@
         android:id="@+id/textView"
         android:layout_width="135dp"
         android:layout_height="57dp"
-        android:text="@string/fix_me"
+        android:text="@string/app_name"
         android:textColor="#47D476"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonCalendar"
