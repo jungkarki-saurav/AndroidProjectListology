@@ -21,6 +21,9 @@ import java.util.ArrayList;
  */
 
 public class ReminderPage extends AppCompatActivity {
+    /**
+     * The database object for storing the information in the database
+     */
     DatabaseHelper objMyDB;
 
     /**
