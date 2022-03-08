@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Fix Me</string>
+    <string name="save">Save</string>
+    <string name="pick_date">Pick Date</string>
+    <string name="pick_time">Pick Time</string>
+    <string name="event_name">Event Name</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="addItem">+</string>
+    <string name="textview">TextView</string>
+    <string name="reminder">REMINDER</string>
+    <string name="calendar">CALENDAR</string>
+    <string name="fix_me">Fix Me</string>
+
+
+</resources>
