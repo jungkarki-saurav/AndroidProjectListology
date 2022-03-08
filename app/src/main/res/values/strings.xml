@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fix Me</string>
+    <string name="app_name">Listology</string>
     <string name="save">Save</string>
     <string name="pick_date">Pick Date</string>
     <string name="pick_time">Pick Time</string>

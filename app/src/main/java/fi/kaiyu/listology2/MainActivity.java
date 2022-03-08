@@ -24,15 +24,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Shows the calendar page.
-     * @param view
-     */
-    public void onClickCalendar(View view) {
-        Intent intent = new Intent(this, CalendarPage.class);
-        startActivity(intent);
-    }
-
-    /**
      * Shows the reminder page
      * @param view
      */
