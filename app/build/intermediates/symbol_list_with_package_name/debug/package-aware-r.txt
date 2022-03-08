@@ -902,7 +902,6 @@ string app_name
 string calendar
 string date
 string event_name
-string fix_me
 string pick_date
 string pick_time
 string reminder
