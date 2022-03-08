@@ -902,8 +902,11 @@ string app_name
 string calendar
 string date
 string event_name
+<<<<<<< HEAD
 string fix_me
 string newTask
+=======
+>>>>>>> database
 string pick_date
 string pick_time
 string save

@@ -901,10 +901,16 @@ int string app_name 0x7f0b0028
 int string calendar 0x7f0b0029
 int string date 0x7f0b002a
 int string event_name 0x7f0b002b
+<<<<<<< HEAD
 int string fix_me 0x7f0b002c
 int string newTask 0x7f0b002d
 int string pick_date 0x7f0b002e
 int string pick_time 0x7f0b002f
+=======
+int string pick_date 0x7f0b002d
+int string pick_time 0x7f0b002e
+int string reminder 0x7f0b002f
+>>>>>>> database
 int string save 0x7f0b0030
 int string search_menu_title 0x7f0b0031
 int string status_bar_notification_info_overflow 0x7f0b0032
