@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
-            "outputFile": "C:\\Users\\Omistaja\\Desktop\\Metropolia\\3rd period\\professional studies\\Android\\project\\Listology2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sr\\values-sr.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Omistaja\\.gradle\\caches\\transforms-3\\031de3817edb2b09743afcf138045ed7\\transformed\\appcompat-1.0.2\\res\\values-sr\\values-sr.xml",
-=======
             "outputFile": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sr\\values-sr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\dkika\\.gradle\\caches\\transforms-3\\031de3817edb2b09743afcf138045ed7\\transformed\\appcompat-1.0.2\\res\\values-sr\\values-sr.xml",
->>>>>>> 6e41784c70b5c976ef81a4182fa93298402b8674
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,11 +14,7 @@
                     }
                 },
                 {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\Omistaja\\.gradle\\caches\\transforms-3\\0bf76ec6376083c8e4cba60a8a32031b\\transformed\\core-1.0.1\\res\\values-sr\\values-sr.xml",
-=======
                     "source": "C:\\Users\\dkika\\.gradle\\caches\\transforms-3\\0bf76ec6376083c8e4cba60a8a32031b\\transformed\\core-1.0.1\\res\\values-sr\\values-sr.xml",
->>>>>>> 6e41784c70b5c976ef81a4182fa93298402b8674
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
