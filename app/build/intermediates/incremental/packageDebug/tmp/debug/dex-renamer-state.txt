@@ -1,4 +1,4 @@
-#Tue Mar 08 11:17:32 EET 2022
-base.0=C\:\\Users\\stran\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Tue Mar 08 13:43:41 EET 2022
+base.0=C\:\\Users\\Omistaja\\Desktop\\Metropolia\\3rd period\\professional studies\\Android\\project\\Listology2\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

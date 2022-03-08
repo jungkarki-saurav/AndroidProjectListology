@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name="fi.kaiyu.listology2.Add_Reminder" />
         <activity android:name="fi.kaiyu.listology2.ReminderPage" />
-        <activity android:name="fi.kaiyu.listology2.CalendarPage" />
+
         <activity
             android:name="fi.kaiyu.listology2.SplashActivity"
             android:exported="true">
