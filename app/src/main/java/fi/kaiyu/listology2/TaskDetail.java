@@ -33,6 +33,17 @@ public class TaskDetail extends AppCompatActivity implements DatePickerDialog.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_modify);
+
+
+        objMyDB = new DatabaseHelper(this);
+        eventText = findViewById(R.id.etEventName);
+
+        dateText = findViewById(R.id.etShowDate);
+        timeText =  findViewById(R.id.etShowTime);
+        Button timePicker = findViewById(R.id.etPickTime);
+
         setContentView(R.layout.activity_add__reminder);
 
 
@@ -41,13 +52,18 @@ public class TaskDetail extends AppCompatActivity implements DatePickerDialog.On
 
         dateText = findViewById(R.id.showDate);
         timeText =  findViewById(R.id.showTime);
-        Button timePicker = findViewById(R.id.pickTime);
+        timePicker = findViewById(R.id.pickTime);
+
 
         Calendar calendar = Calendar.getInstance();
         final int hour = calendar.get(Calendar.HOUR_OF_DAY);
         final int minute = calendar.get(Calendar.MINUTE);
 
+
+        findViewById(R.id.etPickDate).setOnClickListener(view -> showDatePickerDialog());
+
         findViewById(R.id.pickDate).setOnClickListener(view -> showDatePickerDialog());
+
         timePicker.setOnClickListener(v -> {
             TimePickerDialog timePickerDialog = new TimePickerDialog(time, (view, hourOfDay, minute1) -> timeText.setText(hourOfDay + ":" + minute1), hour, minute, android.text.format.DateFormat.is24HourFormat(time));
             timePickerDialog.show();
