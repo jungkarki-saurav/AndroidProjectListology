@@ -41,9 +41,6 @@ public class UpdateTask extends AppCompatActivity implements DatePickerDialog.On
         timeText =  findViewById(R.id.etShowTime);
         Button timePicker = findViewById(R.id.etPickTime);
 
-        setContentView(R.layout.activity_add__reminder);
-
-
         objMyDB = new DatabaseHelper(this);
         eventText = findViewById(R.id.eventName);
 

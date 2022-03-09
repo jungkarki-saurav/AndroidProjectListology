@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\dkika\\.gradle\\caches\\transforms-3\\031de3817edb2b09743afcf138045ed7\\transformed\\appcompat-1.0.2\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\dkika\\.gradle\\caches\\transforms-3\\bfcbf161df86e8959e8196b0cb0afd0e\\transformed\\appcompat-1.2.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

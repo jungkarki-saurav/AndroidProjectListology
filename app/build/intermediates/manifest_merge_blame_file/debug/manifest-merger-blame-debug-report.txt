@@ -19,7 +19,7 @@
 14        android:allowBackup="true"
 14-->C:\Users\dkika\AndroidStudioProjects\listology2\app\src\main\AndroidManifest.xml:8:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.0.1] C:\Users\dkika\.gradle\caches\transforms-3\0bf76ec6376083c8e4cba60a8a32031b\transformed\core-1.0.1\AndroidManifest.xml:22:18-86
+15-->[androidx.core:core:1.5.0] C:\Users\dkika\.gradle\caches\transforms-3\b1fe9740f6c86f0b7649a763c3bf2b85\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 16        android:debuggable="true"
 17        android:icon="@mipmap/ic_launcher"
 17-->C:\Users\dkika\AndroidStudioProjects\listology2\app\src\main\AndroidManifest.xml:9:9-43
