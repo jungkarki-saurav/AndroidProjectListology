@@ -2538,7 +2538,6 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
-id deleteButton
 id deltaRelative
 id design_bottom_sheet
 id design_menu_item_action_area
@@ -2568,12 +2567,6 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
-id etEventName
-id etPickDate
-id etPickTime
-id etSaveButton
-id etShowDate
-id etShowTime
 id eventName
 id exitUntilCollapsed
 id expand_activities_button
@@ -2935,7 +2928,6 @@ layout activity_add__reminder
 layout activity_main
 layout activity_reminder_page
 layout activity_splash
-layout activity_update_task
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

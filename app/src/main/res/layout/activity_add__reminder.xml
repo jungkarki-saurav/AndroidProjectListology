@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#191D1A"
     tools:context="fi.kaiyu.listology2.Add_Reminder">
 
     <Button

@@ -1,23 +1,20 @@
 package fi.kaiyu.listology2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
 /**
- * Shows all the data in the database and uses a button to open Add_Task activity
+ * Shows all the data in the database and uses a button to open Add_Reminder activity
  */
 
 public class ReminderPage extends AppCompatActivity {
@@ -25,6 +22,11 @@ public class ReminderPage extends AppCompatActivity {
      * The database object for storing the information in the database
      */
     DatabaseHelper objMyDB;
+
+    /**
+     * Defining the button for adding task
+     */
+    Button btnAddTask;
 
     /**
      * Displays the items saved in the database to listview
@@ -48,46 +50,24 @@ public class ReminderPage extends AppCompatActivity {
             Log.d("Database: ", "The database was empty");
         } else {
             while (data.moveToNext()) {
-                Log.d("ReadDatabase", data.getString(1));
-                theList.add(data.getString(1));
-                theList.add(data.getString(2));
-                theList.add(data.getString(3));
+                theList.add(data.getString(1));     //add the task
+                theList.add(data.getString(2));     //add the date
+                theList.add(data.getString(3));     //add the time
             }
         }
+
+        //defining a ListAdapter
         final ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, theList);
         listView.setAdapter(listAdapter);
 
-        listView.setOnItemClickListener((adapterView, view, i, l) -> {
+        btnAddTask = findViewById(R.id.button);
 
-            Intent updateTaskIntent = new Intent(this, UpdateTask.class);
-
-
-            //Getting the information of the task that the user has clicked
-            String task = DatabaseHelper.getTASK();
-            String id = DatabaseHelper.getID();
-
-            //Putting all the information in the bundle
-            Bundle bundle = new Bundle();
-            bundle.putString("TASK", task);
-            bundle.putString("ID", id);
-
-
-            //Now putting the bundle itself as Extras when starting the new activity
-            updateTaskIntent.putExtras(bundle);
-            startActivity(updateTaskIntent);
+        //open activity when the button is clicked
+        btnAddTask.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Add_Reminder.class);
+            startActivity(intent);
         });
-
-}
-
-    /**
-     * opens the add Task page
-     * @param view -the button which will take us to the Add Tasks page
-     */
-    public void onClickAddReminder(View view) {
-        Intent intent = new Intent(this, Add_Reminder.class);
-        startActivity(intent);
     }
-
 
 
 }

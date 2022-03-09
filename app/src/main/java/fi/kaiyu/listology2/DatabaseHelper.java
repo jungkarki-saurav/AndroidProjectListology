@@ -15,19 +15,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String TABLE_NAME = "Reminders";
     private static final String ID = "ID";
     private static final String TASK = "task";
-    private static final String COL3 = "Date";
-    private static final String COL4 = "Time";
     private final String queryToCreateDatabase = "create table Reminders (ID INTEGER PRIMARY KEY AUTOINCREMENT" + ",EventName VARCHAR(255),Date VARCHAR(255),Time VARCHAR(255))";
     Context context;
     private SQLiteDatabase db;
 
-    public static String getID() {
-        return ID;
-    }
-
-    public static String getTASK() {
-        return TASK;
-    }
 
     /**
      * Creates a database
@@ -38,10 +29,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         this.context = context;
     }
 
-    @Override
+
     /**
      * checks if the database is created or not
      */
+    @Override
     public void onCreate(SQLiteDatabase db) {
         try {
             db.execSQL(queryToCreateDatabase);
@@ -52,6 +44,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    /**
+     *
+     * @param db -database object
+     * @param oldVersion - oldVersion of the database
+     * @param newVersion -newVersion of the database
+     * @see <a href="https://www.youtube.com/watch?v=e3fLWNEBPM0&list=PLzEWSvaHx_Z2MeyGNQeUCEktmnJBp8136&index=4">Tutorial (see lines 28-34 in the video)</a>
+     */
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -73,12 +72,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    /**
+     *
+     * @param id -unique id of the task
+     * @param task -the string of the task
+     * @see <a href="https://www.youtube.com/watch?v=e3fLWNEBPM0&list=PLzEWSvaHx_Z2MeyGNQeUCEktmnJBp8136&index=4">Tutorial (see lines 85-89 in the video)</a>
+     */
     public void updateTask(int id, String task) {
         ContentValues cv = new ContentValues();
         cv.put(TASK, task);
         db.update(TABLE_NAME, cv, ID + "= ?", new String[] {String.valueOf(id)});
     }
 
+    /**
+     *
+     * @param id -unique id of the task
+     * @see <a href="https://www.youtube.com/watch?v=e3fLWNEBPM0&list=PLzEWSvaHx_Z2MeyGNQeUCEktmnJBp8136&index=4">Tutorial (see lines 91-93 in the video)</a>
+     */
     public void deleteTask(int id){
         db.delete(TABLE_NAME, ID + "= ?", new String[] {String.valueOf(id)});
     }
