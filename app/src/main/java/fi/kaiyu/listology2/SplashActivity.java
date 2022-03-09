@@ -23,7 +23,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
 
-        final Intent i = new Intent(SplashActivity.this, MainActivity.class);
+        final Intent i = new Intent(SplashActivity.this, ReminderPage.class);
         new Handler().postDelayed(() -> {
             startActivity(i);
             finish();

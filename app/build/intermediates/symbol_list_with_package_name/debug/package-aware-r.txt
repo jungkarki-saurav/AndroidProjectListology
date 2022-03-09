@@ -846,6 +846,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add__reminder
 layout activity_main
+layout activity_modify
 layout activity_reminder_page
 layout activity_splash
 layout notification_action
