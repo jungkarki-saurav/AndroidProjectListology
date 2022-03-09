@@ -88,6 +88,10 @@
         "source": "C:\\Users\\Omistaja\\Desktop\\Metropolia\\3rd period\\professional studies\\Android\\project\\Listology2\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "C:\\Users\\Omistaja\\Desktop\\Metropolia\\3rd period\\professional studies\\Android\\project\\Listology2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_modify.xml.flat",
+        "source": "C:\\Users\\Omistaja\\Desktop\\Metropolia\\3rd period\\professional studies\\Android\\project\\Listology2\\app\\src\\main\\res\\layout\\activity_modify.xml"
+    },
+    {
         "merged": "C:\\Users\\Omistaja\\Desktop\\Metropolia\\3rd period\\professional studies\\Android\\project\\Listology2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Omistaja\\Desktop\\Metropolia\\3rd period\\professional studies\\Android\\project\\Listology2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },

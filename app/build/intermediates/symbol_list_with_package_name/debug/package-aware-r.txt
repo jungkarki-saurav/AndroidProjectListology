@@ -689,6 +689,7 @@ id button
 id buttonCalendar
 id buttonPanel
 id buttonReminder
+id cancelButton
 id center
 id center_horizontal
 id center_vertical
@@ -709,6 +710,12 @@ id direct
 id disableHome
 id edit_query
 id end
+id etEventName
+id etPickDate
+id etPickTime
+id etSaveButton
+id etShowDate
+id etShowTime
 id eventName
 id expand_activities_button
 id expanded_menu
@@ -846,6 +853,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add__reminder
 layout activity_main
+layout activity_modify
 layout activity_reminder_page
 layout activity_splash
 layout notification_action
@@ -903,6 +911,7 @@ string addItem
 string app_name
 string calendar
 string date
+string delete
 string event_name
 string newTask
 string pick_date
