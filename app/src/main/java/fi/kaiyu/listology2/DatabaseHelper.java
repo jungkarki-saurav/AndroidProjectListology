@@ -16,7 +16,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COL2 = "EventName";
     private static final String COL3 = "Date";
     private static final String COL4 = "Time";
-    private String queryToCreateDatabase = "create table Reminders (ID INTEGER PRIMARY KEY AUTOINCREMENT" + ",EventName VARCHAR(255),Date VARCHAR(255),Time VARCHAR(255))";
+    private final String queryToCreateDatabase = "create table Reminders (ID INTEGER PRIMARY KEY AUTOINCREMENT" + ",EventName VARCHAR(255),Date VARCHAR(255),Time VARCHAR(255))";
     Context context;
 
     /**
@@ -40,6 +40,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Toast.makeText(context, "Error while creating table", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        // Drop older table if existed
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        // Create tables again
+        onCreate(db);
     }
 
 
