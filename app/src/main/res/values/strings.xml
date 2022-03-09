@@ -11,7 +11,7 @@
     <string name="newTask">New Task</string>
     <string name="calendar">CALENDAR</string>
     <string name="tasks_heading">Tasks</string>
-    <string name="intro_string">Let\'s get started!</string>
+    <string name="delete">Delete</string>
 
 
 </resources>
