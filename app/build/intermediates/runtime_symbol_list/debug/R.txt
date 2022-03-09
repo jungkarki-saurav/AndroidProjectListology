@@ -904,6 +904,7 @@ int string app_name 0x7f0b0028
 int string calendar 0x7f0b0029
 int string date 0x7f0b002a
 int string event_name 0x7f0b002b
+int string intro_string 0x7f0b0035
 int string newTask 0x7f0b002c
 int string pick_date 0x7f0b002d
 int string pick_time 0x7f0b002e

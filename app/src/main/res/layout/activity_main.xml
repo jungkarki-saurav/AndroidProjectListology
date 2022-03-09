@@ -13,7 +13,7 @@
         android:layout_marginTop="424dp"
         android:background="@drawable/btn_rounded"
         android:onClick="onClickReminder"
-        android:text="@string/newTask"
+        android:text="@string/intro_string"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
