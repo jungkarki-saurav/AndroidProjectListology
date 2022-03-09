@@ -689,7 +689,6 @@ id button
 id buttonCalendar
 id buttonPanel
 id buttonReminder
-id cancelButton
 id center
 id center_horizontal
 id center_vertical
@@ -705,6 +704,7 @@ id custom
 id customPanel
 id decor_content_parent
 id default_activity_button
+id deleteButton
 id dimensions
 id direct
 id disableHome

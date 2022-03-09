@@ -59,23 +59,18 @@ public class ReminderPage extends AppCompatActivity {
 
         listView.setOnItemClickListener((adapterView, view, i, l) -> {
 
-            Intent intent = new Intent(this, DisplayPresident.class);
+            Intent intent = new Intent(this, TaskDetail.class);
 
-            //Creating a new President object
-            President president = President.getInstance().getPresident(i);
 
-            //Getting the information of the president that the user has clicked
-            String name = president.getName();
-            int startYear = president.getStartYear();
-            int endYear = president.getEndYear();
-            String description = president.getDescription();
+            //Getting the information of the task that the user has clicked
+            String task = DatabaseHelper.getTASK();
+            String id = DatabaseHelper.getID();
 
             //Putting all the information in the bundle
             Bundle bundle = new Bundle();
-            bundle.putString("NAME", name);
-            bundle.putString("DESCRIPTION", description);
-            bundle.putInt("START YEAR", startYear);
-            bundle.putInt("END YEAR", endYear);
+            bundle.putString("TASK", task);
+            bundle.putString("ID", id);
+
 
             //Now putting the bundle itself as Extras when starting the new activity
             intent.putExtras(bundle);

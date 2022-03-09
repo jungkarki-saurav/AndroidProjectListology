@@ -21,6 +21,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     Context context;
     private SQLiteDatabase db;
 
+    public static String getID() {
+        return ID;
+    }
+
+    public static String getTASK() {
+        return TASK;
+    }
+
     /**
      * Creates a database
      * @param context
