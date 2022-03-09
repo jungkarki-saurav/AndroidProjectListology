@@ -20,6 +20,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/actions" />
+
         <activity android:name="fi.kaiyu.listology2.Add_Reminder" />
         <activity android:name="fi.kaiyu.listology2.ReminderPage" />
         <activity
@@ -31,8 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="fi.kaiyu.listology2.MainActivity" >
-        </activity>
+        <activity android:name="fi.kaiyu.listology2.MainActivity" />
     </application>
 
 </manifest>

@@ -11,11 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="fi.kaiyu.listology2.Add_Reminder" />
-        <activity android:name="fi.kaiyu.listology2.ReminderPage" />
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/actions" />
 
+        <activity android:name=".Add_Reminder" />
+        <activity android:name=".ReminderPage" />
         <activity
-            android:name="fi.kaiyu.listology2.SplashActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,8 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="fi.kaiyu.listology2.MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
