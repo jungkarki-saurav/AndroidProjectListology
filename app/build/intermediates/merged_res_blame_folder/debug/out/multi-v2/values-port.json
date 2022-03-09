@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\stran\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "outputFile": "C:\\Users\\Omistaja\\Desktop\\Metropolia\\3rd period\\professional studies\\Android\\project\\Listology2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\stran\\.gradle\\caches\\transforms-3\\031de3817edb2b09743afcf138045ed7\\transformed\\appcompat-1.0.2\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\Omistaja\\.gradle\\caches\\transforms-3\\031de3817edb2b09743afcf138045ed7\\transformed\\appcompat-1.0.2\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

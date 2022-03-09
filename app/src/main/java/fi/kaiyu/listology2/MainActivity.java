@@ -9,12 +9,12 @@ import android.view.View;
 
 
 /**
- * combines the reminder page and calendar page
+ * This is the main screen of the app which allows the user to navigate to the tasks page
  */
 public class MainActivity extends AppCompatActivity {
     /**
      * the main activity page
-     * @param savedInstanceState
+     * @param savedInstanceState -a reference to a Bundle object that is passed into the onCreate method of every Android Activity.
      */
 
     @Override
@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Shows the reminder page
-     * @param view
+     * Shows the Tasks page
+     * @param view -the button which will take us to the Tasks page
      */
     public void onClickReminder(View view) {
         Intent intent = new Intent(this, ReminderPage.class);

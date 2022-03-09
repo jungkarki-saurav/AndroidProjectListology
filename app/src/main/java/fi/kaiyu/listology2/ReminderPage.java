@@ -11,31 +11,39 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 
 
 import java.util.ArrayList;
 
 /**
- * shows all the data in the database and uses a button to open Add reminder activity
+ * Shows all the data in the database and uses a button to open Add_Task activity
  */
 
 public class ReminderPage extends AppCompatActivity {
+    /**
+     * The database object for storing the information in the database
+     */
     DatabaseHelper objMyDB;
 
     /**
-     * displays the items saved in the database to listview
-     * @param savedInstanceState
+     * Displays the items saved in the database to listview
+     * @param savedInstanceState -a reference to a Bundle object that is passed into the onCreate method of every Android Activity.
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminder_page);
+
         final ListView listView = findViewById(R.id.reminder_list);
+
         objMyDB = new DatabaseHelper(this);
+
         ArrayList<String> theList = new ArrayList<>();
+
+        //getting all the data from the database
         Cursor data = objMyDB.getListContents();
+
         if (data.getCount() == 0) {
             Log.d("Database: ", "The database was empty");
         } else {
@@ -51,13 +59,10 @@ public class ReminderPage extends AppCompatActivity {
 
 }
 
-
     /**
-     * opens the add reminder page
-     * @param view
+     * opens the add Task page
+     * @param view -the button which will take us to the Add Tasks page
      */
-
-
     public void onClickAddReminder(View view) {
         Intent intent = new Intent(this, Add_Reminder.class);
         startActivity(intent);
