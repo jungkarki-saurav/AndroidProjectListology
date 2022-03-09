@@ -57,6 +57,26 @@ public class ReminderPage extends AppCompatActivity {
         final ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, theList);
         listView.setAdapter(listAdapter);
 
+        listView.setOnItemClickListener((adapterView, view, i, l) -> {
+
+            Intent updateTaskIntent = new Intent(this, UpdateTask.class);
+
+
+            //Getting the information of the task that the user has clicked
+            String task = DatabaseHelper.getTASK();
+            String id = DatabaseHelper.getID();
+
+            //Putting all the information in the bundle
+            Bundle bundle = new Bundle();
+            bundle.putString("TASK", task);
+            bundle.putString("ID", id);
+
+
+            //Now putting the bundle itself as Extras when starting the new activity
+            updateTaskIntent.putExtras(bundle);
+            startActivity(updateTaskIntent);
+        });
+
 }
 
     /**

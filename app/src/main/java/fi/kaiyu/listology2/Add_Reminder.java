@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -23,6 +24,7 @@ import java.util.Calendar;
  */
 public class Add_Reminder extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
+    private static final String TAG = "AddReminder";
     private EditText eventText;
     private TextView dateText;
     private TextView timeText;
@@ -35,6 +37,7 @@ public class Add_Reminder extends AppCompatActivity implements DatePickerDialog.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add__reminder);
 
+        Log.d(TAG, "onCreate: ");
 
         objMyDB = new DatabaseHelper(this);
         eventText = findViewById(R.id.eventName);

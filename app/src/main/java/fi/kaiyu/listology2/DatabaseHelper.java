@@ -1,5 +1,6 @@
 package fi.kaiyu.listology2;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,12 +13,21 @@ import android.widget.Toast;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "RemindersInfo.db";
     private static final String TABLE_NAME = "Reminders";
-    private static final String COL1 = "ID";
-    private static final String COL2 = "EventName";
+    private static final String ID = "ID";
+    private static final String TASK = "task";
     private static final String COL3 = "Date";
     private static final String COL4 = "Time";
-    private String queryToCreateDatabase = "create table Reminders (ID INTEGER PRIMARY KEY AUTOINCREMENT" + ",EventName VARCHAR(255),Date VARCHAR(255),Time VARCHAR(255))";
+    private final String queryToCreateDatabase = "create table Reminders (ID INTEGER PRIMARY KEY AUTOINCREMENT" + ",EventName VARCHAR(255),Date VARCHAR(255),Time VARCHAR(255))";
     Context context;
+    private SQLiteDatabase db;
+
+    public static String getID() {
+        return ID;
+    }
+
+    public static String getTASK() {
+        return TASK;
+    }
 
     /**
      * Creates a database
@@ -42,26 +52,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    /**
-     * updates the database but we couldnt implement it due to lack of time :(
-     * @param db
-     * @param oldVersion
-     * @param newVersion
-     */
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        // Drop older table if existed
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        // Create tables again
+        onCreate(db);
     }
+
 
     /**
      * returns the data from a database
-     * @return
+     * @return data
      */
     public Cursor getListContents() {
         SQLiteDatabase objSQLiteDatabase = this.getWritableDatabase();
         Cursor data = objSQLiteDatabase.rawQuery("select * from " + TABLE_NAME, null);
         return data;
 
+    }
+
+    public void updateTask(int id, String task) {
+        ContentValues cv = new ContentValues();
+        cv.put(TASK, task);
+        db.update(TABLE_NAME, cv, ID + "= ?", new String[] {String.valueOf(id)});
+    }
+
+    public void deleteTask(int id){
+        db.delete(TABLE_NAME, ID + "= ?", new String[] {String.valueOf(id)});
     }
 
 
