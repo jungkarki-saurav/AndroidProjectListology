@@ -42,16 +42,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    /**
-     * updates the database but we couldnt implement it due to lack of time :(
-     * @param db
-     * @param oldVersion
-     * @param newVersion
-     */
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-    }
 
     /**
      * returns the data from a database
