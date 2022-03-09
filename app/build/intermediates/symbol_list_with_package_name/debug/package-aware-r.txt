@@ -719,6 +719,7 @@ id forever
 id gone
 id group_divider
 id groups
+id header
 id home
 id homeAsUp
 id icon
@@ -803,6 +804,7 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
+id tvTasks
 id uniform
 id up
 id useLogo
@@ -908,6 +910,7 @@ string pick_time
 string save
 string search_menu_title
 string status_bar_notification_info_overflow
+string tasks_heading
 string textview
 string time
 style AlertDialog_AppCompat

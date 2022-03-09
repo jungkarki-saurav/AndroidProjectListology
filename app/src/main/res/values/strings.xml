@@ -10,7 +10,7 @@
     <string name="textview">TextView</string>
     <string name="newTask">New Task</string>
     <string name="calendar">CALENDAR</string>
-
+    <string name="tasks_heading">Tasks</string>
 
 
 </resources>
