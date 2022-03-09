@@ -19,7 +19,7 @@ android {
 }
 
 dependencies {
-    compileOnly files("C:/Users/dkika/AppData/Local/Android/Sdk/platforms/android-32/android.jar")
+    compileOnly files("C:/Users/Omistaja/AppData/Local/Android/Sdk/platforms/android-32/android.jar")
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'

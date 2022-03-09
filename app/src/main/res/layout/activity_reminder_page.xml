@@ -35,6 +35,7 @@
             android:layout_height="89dp"
             android:layout_marginBottom="32dp"
             android:background="@drawable/btn_rounded"
+            android:backgroundTint="@android:color/holo_blue_dark"
             android:onClick="onClickAddReminder"
             android:text="@string/addItem"
             android:textSize="36sp"
