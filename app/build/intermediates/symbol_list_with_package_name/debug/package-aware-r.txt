@@ -804,8 +804,6 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
-id tvMainItem
-id tvSubItem
 id tvTasks
 id uniform
 id up
@@ -850,7 +848,6 @@ layout activity_add__reminder
 layout activity_main
 layout activity_reminder_page
 layout activity_splash
-layout custom_list_view
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
