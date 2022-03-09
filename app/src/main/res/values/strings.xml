@@ -11,6 +11,9 @@
     <string name="newTask">New Task</string>
     <string name="calendar">CALENDAR</string>
     <string name="fix_me">Fix Me</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="task_detail">Task Detail</string>
 
 
 </resources>

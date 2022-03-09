@@ -381,6 +381,7 @@
     <string name="app_name">Listology</string>
     <string name="calendar">CALENDAR</string>
     <string name="date">Date</string>
+    <string name="delete">Delete</string>
     <string name="event_name">Event Name</string>
     <string name="fix_me">Fix Me</string>
     <string name="newTask">New Task</string>
@@ -389,8 +390,10 @@
     <string name="save">Save</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="task_detail">Task Detail</string>
     <string name="textview">TextView</string>
     <string name="time">Time</string>
+    <string name="update">Update</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

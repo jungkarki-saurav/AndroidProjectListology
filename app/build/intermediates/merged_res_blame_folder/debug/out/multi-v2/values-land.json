@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
-            "outputFile": "C:\\Users\\Omistaja\\Desktop\\Metropolia\\3rd period\\professional studies\\Android\\project\\Listology2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "C:\\Users\\stran\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Omistaja\\.gradle\\caches\\transforms-3\\031de3817edb2b09743afcf138045ed7\\transformed\\appcompat-1.0.2\\res\\values-land\\values-land.xml",
-=======
-            "outputFile": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\dkika\\.gradle\\caches\\transforms-3\\031de3817edb2b09743afcf138045ed7\\transformed\\appcompat-1.0.2\\res\\values-land\\values-land.xml",
->>>>>>> 6e41784c70b5c976ef81a4182fa93298402b8674
+                    "source": "C:\\Users\\stran\\.gradle\\caches\\transforms-3\\031de3817edb2b09743afcf138045ed7\\transformed\\appcompat-1.0.2\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
