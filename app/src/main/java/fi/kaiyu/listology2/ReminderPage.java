@@ -59,7 +59,7 @@ public class ReminderPage extends AppCompatActivity {
 
         listView.setOnItemClickListener((adapterView, view, i, l) -> {
 
-            Intent intent = new Intent(this, UpdateTask.class);
+            Intent updateTaskIntent = new Intent(this, UpdateTask.class);
 
 
             //Getting the information of the task that the user has clicked
@@ -73,8 +73,8 @@ public class ReminderPage extends AppCompatActivity {
 
 
             //Now putting the bundle itself as Extras when starting the new activity
-            intent.putExtras(bundle);
-            startActivity(intent);
+            updateTaskIntent.putExtras(bundle);
+            startActivity(updateTaskIntent);
         });
 
 }

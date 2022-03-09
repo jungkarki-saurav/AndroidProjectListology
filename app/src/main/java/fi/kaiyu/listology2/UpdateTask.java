@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -23,6 +24,7 @@ import android.os.Bundle;
 
 public class UpdateTask extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
+    private static final String TAG = "Update Task";
     private EditText eventText;
     private TextView dateText;
     private TextView timeText;
@@ -33,6 +35,8 @@ public class UpdateTask extends AppCompatActivity implements DatePickerDialog.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_task);
+
+        Log.d(TAG, "onCreate: ");
 
         objMyDB = new DatabaseHelper(this);
         eventText = findViewById(R.id.etEventName);

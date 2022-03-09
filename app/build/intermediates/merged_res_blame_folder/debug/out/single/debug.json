@@ -4,12 +4,12 @@
         "source": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_update_task.xml.flat",
         "source": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\src\\main\\res\\layout\\activity_update_task.xml"
+    },
+    {
+        "merged": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
@@ -110,10 +110,6 @@
     {
         "merged": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_modify.xml.flat",
-        "source": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\src\\main\\res\\layout\\activity_modify.xml"
     },
     {
         "merged": "C:\\Users\\dkika\\AndroidStudioProjects\\listology2\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
