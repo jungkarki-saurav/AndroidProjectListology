@@ -6,6 +6,9 @@
 ## JavaDoc
 * Link to [JavaDoc](https://users.metropolia.fi/~sauravka/JavaDOC/JavaDocFinal/fi/kaiyu/listology2/package-summary.html)
 
+## UML Class Diagram
+https://users.metropolia.fi/~parthk/FinalUMLClassDiagram.jpg
+
 ## Documented test case
 * https://docs.google.com/document/d/1vkAg1UOmIDsrxLuNVWRPwe8xEP1VlFnsCXfO9kl3_vA/edit
 
