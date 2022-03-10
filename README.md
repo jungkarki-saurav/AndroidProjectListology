@@ -4,7 +4,7 @@
 * This project was created and assembled after the failure of the first [**Listology**](https://gitlab.metropolia.fi/kaiyuz/Test-Project-07-02-2022) project
 
 ## JavaDoc
-* Link to [JavaDoc](https://users.metropolia.fi/~sauravka/JavaDOC/JavaDocFinal/fi/kaiyu/listology2/package-summary.html)
+* https://users.metropolia.fi/~sauravka/JavaDOC/JavaDocFinal/fi/kaiyu/listology2/package-summary.html
 
 ## UML Class Diagram
 * https://users.metropolia.fi/~parthk/FinalUMLClassDiagram.jpg
