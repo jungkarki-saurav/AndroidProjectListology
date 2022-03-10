@@ -27,6 +27,6 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(() -> {
             startActivity(i);
             finish();
-        }, 1500);
+        }, 1500);   //delays the start of another activity by 1.5 seconds
     }
 }

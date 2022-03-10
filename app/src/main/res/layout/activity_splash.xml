@@ -8,7 +8,8 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/white_tick" />
+        android:src="@drawable/white_tick"
+        android:contentDescription="Tick displayed when the app is launched" />
 
 
 </RelativeLayout>

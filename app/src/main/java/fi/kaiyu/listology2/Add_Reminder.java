@@ -1,5 +1,6 @@
 package fi.kaiyu.listology2;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.ContentValues;
@@ -20,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Calendar;
 
 /**
- *pop up date picker dialog, pop up time picker dialog and saves reminders into database
+ * Allows the user to write task, select date and time, and then store it to database after clicking 'save' button
  */
 public class Add_Reminder extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
@@ -29,9 +30,16 @@ public class Add_Reminder extends AppCompatActivity implements DatePickerDialog.
     private TextView dateText;
     private TextView timeText;
     private final Context time = this;
+
+    /**
+     * The database object for storing the information in the database
+     */
     DatabaseHelper objMyDB;
 
-
+    /**
+     * Allows the user to pick date and time
+     * @param savedInstanceState -a reference to a Bundle object that is passed into the onCreate method of every Android Activity.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +48,8 @@ public class Add_Reminder extends AppCompatActivity implements DatePickerDialog.
         Log.d(TAG, "onCreate: ");
 
         objMyDB = new DatabaseHelper(this);
-        eventText = findViewById(R.id.eventName);
 
+        eventText = findViewById(R.id.eventName);
         dateText = findViewById(R.id.showDate);
         timeText =  findViewById(R.id.showTime);
         Button timePicker = findViewById(R.id.pickTime);
@@ -50,16 +58,19 @@ public class Add_Reminder extends AppCompatActivity implements DatePickerDialog.
         final int hour = calendar.get(Calendar.HOUR_OF_DAY);
         final int minute = calendar.get(Calendar.MINUTE);
 
+        //enter date by clicking the 'pick a date' button
         findViewById(R.id.pickDate).setOnClickListener(view -> showDatePickerDialog());
+
+        //enter date by clicking the 'pick a time' button
         timePicker.setOnClickListener(v -> {
-            TimePickerDialog timePickerDialog = new TimePickerDialog(time, (view, hourOfDay, minute1) -> timeText.setText(hourOfDay + ":" + minute1), hour, minute, android.text.format.DateFormat.is24HourFormat(time));
+            @SuppressLint("SetTextI18n") TimePickerDialog timePickerDialog = new TimePickerDialog(time, (view, hourOfDay, minute1) -> timeText.setText(hourOfDay + ":" + minute1), hour, minute, android.text.format.DateFormat.is24HourFormat(time));
             timePickerDialog.show();
         });
 
     }
 
     /**
-     * show the pop up date picker dialog
+     * shows the date picker dialog
      */
     private void showDatePickerDialog() {
         DatePickerDialog datePickerDialog = new DatePickerDialog(
@@ -74,9 +85,9 @@ public class Add_Reminder extends AppCompatActivity implements DatePickerDialog.
     /**
      * Displays the date picker on textview
      * @param view
-     * @param year
-     * @param month
-     * @param dayOfMonth
+     * @param year -the year entered by the user
+     * @param month -the month entered by the user
+     * @param dayOfMonth -the dayOfMonth entered by the user
      */
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -84,19 +95,6 @@ public class Add_Reminder extends AppCompatActivity implements DatePickerDialog.
         dateText.setText(date);
     }
 
-    /**
-     * creates a database when reminder page opened
-     * @param view
-     */
-    public void createDatabase(View view) {
-        try {
-            objMyDB.getReadableDatabase();
-        } catch (Exception e) {
-            Toast.makeText(this, "exception while creating database" + e.getMessage(), Toast.LENGTH_SHORT).show();
-
-        }
-
-    }
 
     /**
      * adds items to the database
@@ -104,25 +102,33 @@ public class Add_Reminder extends AppCompatActivity implements DatePickerDialog.
      */
     public void insertIntoDatabase(View view) {
         try {
-            SQLiteDatabase objSQLiteDatabase = objMyDB.getWritableDatabase();
+            SQLiteDatabase objSQLiteDatabase = objMyDB.getWritableDatabase();       //open database in writing mode
+
+            //check if database exists
             if (objSQLiteDatabase != null) {
-                if (!eventText.getText().toString().isEmpty() && !dateText.getText().toString().isEmpty() && !timeText.getText().toString().isEmpty()
-                ) {
+
+                //Check if all the fields are filled
+                if (!eventText.getText().toString().isEmpty() && !dateText.getText().toString().isEmpty() && !timeText.getText().toString().isEmpty()) {
                     ContentValues objContentValues = new ContentValues();
+                    //put the values entered by the user (task, date, time) in the object 'objContentValues'
                     objContentValues.put("EventName", eventText.getText().toString());
                     objContentValues.put("Date", dateText.getText().toString());
                     objContentValues.put("Time", timeText.getText().toString());
 
+                    //insert data into database
                     long checkIfQueryRuns = objSQLiteDatabase.insert("Reminders", null, objContentValues);
+
+                    //check if the data is added to the database
                     if (checkIfQueryRuns != -1) {
                         Toast.makeText(this, "Reminder Saved :D ", Toast.LENGTH_SHORT).show();
                         eventText.setText(null);
                         dateText.setText(null);
                         timeText.setText(null);
+
+                        //new intent go back to list view...
                         Intent intent =  new Intent(this,ReminderPage.class);
                         startActivity(intent);
-                        //new intent go back to list view...
-                    } else {
+                    }else {
                         Toast.makeText(this, "Problem in saving reminder :( ", Toast.LENGTH_SHORT).show();
                     }
                 } else {
