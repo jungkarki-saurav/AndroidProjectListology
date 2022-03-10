@@ -3,6 +3,11 @@
 * Parallel project of Listology, backup plan
 * This project was created and assembled after the failure of the first [**Listology**](https://gitlab.metropolia.fi/kaiyuz/Test-Project-07-02-2022) project
 
+## Members
+* Parth Kikani
+* Kaiyu Zhang
+* Saurav Karki
+
 ## JavaDoc
 * https://users.metropolia.fi/~sauravka/JavaDOC/JavaDocFinal/fi/kaiyu/listology2/package-summary.html
 
